@@ -1,0 +1,121 @@
+/*title-profile  */
+/*num  */
+/*texts  */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(25, 162, 174);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contenido::after {
+    content: url("../images/bg-pattern-top.svg");
+    position: absolute;
+    top: -500px;
+    left: -200px;
+}
+
+.contenido::before {
+    content: url("../images/bg-pattern-bottom.svg");
+    position: absolute;
+    bottom: -500px;
+    right: -200px;
+}
+
+.card {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 22%;
+    height: auto; 
+    border-radius: 15px;
+}
+
+.bg-card {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card__photo-profile {
+    position: relative;
+    top: -50px;
+    width: 96px;
+    height: 96px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.datos-profile {
+    margin-top: -30px;
+}
+
+.card__name-profile {
+    margin: 0 5px 0 0;
+    font-weight: 700;
+    color: rgb(45, 50, 72);
+    font-size: 18px;
+}
+
+.card__age-profile,
+.card__place-profile {
+    color: rgb(106, 111, 129);
+    font-weight: 400;
+}
+
+.card__place-profile {
+    margin: 10px 0;
+}
+
+.stats {
+    margin: 10px 0 0 0;
+    width: 100%;
+    border-top: 1px solid rgba(150, 150, 150, 0.295);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-stats {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-num {
+    margin: 18px 0 0 0 ;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(45, 50, 72);
+    font-weight: 700;
+}
+
+.stats-text {
+    margin: 0 0 14px 0;
+    font-size: 12px;
+    color: rgb(150, 150, 150);
+}
+
+@media screen and (min-width: 375px) and (max-width: 630px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 630px) and (max-width: 900px) {
+    .card {
+        width: 60%;
+    }
+}
